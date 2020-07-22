@@ -1,8 +1,9 @@
-{"men_tshirts":"",
-"men_shorts":"",
-"men_casual_shirts":"",
-"men_pants":"",
-"women_tshirts":"",
-"women_kurtas_tunics":"",
-"women_ethnic_dress":"",
-"women_sarees":""}
+{"men_tshirts":"https://www.koovs.com/jarvis-service/v1/product/listing/complete?href=https%3A%2F%2Fwww.koovs.com%2Fmen%2Ft-shirts-and-polo-shirts%2F&page-size=100&sort=latest",
+"men_shorts":"https://www.koovs.com/jarvis-service/v1/product/listing/complete?href=https%3A%2F%2Fwww.koovs.com%2Fmen%2Fshorts%2F&page-size=100&sort=latest",
+"men_casual_shirts":"https://www.koovs.com/jarvis-service/v1/product/listing/complete?href=https%3A%2F%2Fwww.koovs.com%2Fmen%2Fshirts%2F&page-size=100&sort=latest",
+"men_pants":"https://www.koovs.com/jarvis-service/v1/product/listing/complete?href=https%3A%2F%2Fwww.koovs.com%2Fmen%2Fjeans%2F&page-size=100&sort=latest",
+"women_tshirts":"https://www.koovs.com/jarvis-service/v1/product/listing/complete?href=https%3A%2F%2Fwww.koovs.com%2Fwomen%2Ftops%2F&page-size=100&sort=latest",
+"women_jumpsuits":"https://www.koovs.com/jarvis-service/v1/product/listing/complete?href=https%3A%2F%2Fwww.koovs.com%2Fwomen%2Fjumpsuits-and-playsuits%2F&page-size=100&sort=latest",
+"women_western_dress":"https://www.koovs.com/jarvis-service/v1/product/listing/complete?href=https%3A%2F%2Fwww.koovs.com%2Fwomen%2Fdresses%2F&page-size=100&sort=latest",
+"women_trousers_leggings":"https://www.koovs.com/jarvis-service/v1/product/listing/complete?href=https%3A%2F%2Fwww.koovs.com%2Fwomen%2Ftrousers-and-leggings%2Fsortby-latest%2F&page-size=100&sort=latest"
+}
