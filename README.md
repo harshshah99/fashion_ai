@@ -4,6 +4,6 @@ Code and Files for Fashion Intelligence Systems
 
 - [x] Myntra Scraper and CSV
 - [x] Ajio 
-- [ ] Ajio Trends
+- [x] Ajio Trends
 - [ ] Koovs
 - [ ] NordStrom   
