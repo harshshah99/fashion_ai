@@ -1,0 +1,9 @@
+{"men_tshirts":"https://www.nordstrom.com/api/browse/query/browse/men/clothing/tshirts?top=100&breadcrumb=Home%2FMen%2FClothing%2FT-Shirts %26 Tank Tops&origin=topnav&sort=Newest&offset=0",
+"men_casual_shirts":"https://www.nordstrom.com/api/browse/query/browse/men/clothing/shirts?top=100&breadcrumb=Home%2FMen%2FClothing%2FShirts&origin=topnav&sort=Newest&offset=0",
+"men_pants":"https://www.nordstrom.com/api/browse/query/browse/men/clothing/pants?top=100&breadcrumb=Home%2FMen%2FClothing%2FPants&origin=topnav&sort=Newest&offset=0",
+"men_blazers_sportcoats":"https://www.nordstrom.com/api/browse/query/browse/men/clothing/blazers-sportcoats?top=100&breadcrumb=Home%2FMen%2FClothing%2FBlazers%20%26%20Sport%20Coats&origin=topnav&sort=Newest&offset=0",
+"women_tops_tshirts":"https://www.nordstrom.com/api/browse/query/browse/women/clothing/tops-tees?top=100&breadcrumb=Home%2FWomen%2FClothing%2FTops&offset=5&origin=topnav&sort=Newest&offset=0",
+"women_jumpsuits":"https://www.nordstrom.com/api/browse/query/browse/women/clothing/jumpsuits-rompers?top=100&breadcrumb=Home%2FWomen%2FClothing%2FJumpsuits %26 Rompers&origin=topnav&sort=Newest&offset=0",
+"women_western_dress":"https://www.nordstrom.com/api/browse/query/browse/women/clothing/dresses?top=100&breadcrumb=Home%2FWomen%2FClothing%2FDresses&offset=5&origin=topnav&sort=Newest&offset=0",
+"women_trousers_leggings":"https://www.nordstrom.com/api/browse/query/browse/women/clothing/pants?top=100&breadcrumb=Home%2FWomen%2FClothing%2FPants%20%26%20Leggings&origin=topnav&sort=Newest&offset=0"
+}
