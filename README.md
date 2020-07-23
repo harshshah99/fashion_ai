@@ -7,3 +7,4 @@ Code and Files for Fashion Intelligence Systems
 - [x] Ajio Trends
 - [x] Koovs
 - [x] NordStrom   
+- [x] Asos
