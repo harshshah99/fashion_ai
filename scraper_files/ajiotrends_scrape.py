@@ -1,19 +1,20 @@
 import json
 import pandas as pd
 import requests
+import os
 
 
 def dataframe_handling(df1,category,website_name,unique_column_name,domain_name,url_column_name,name_tag):
 	df_clean = df1.reset_index(drop=True)
 	df_clean = df_clean.drop_duplicates(unique_column_name,keep='first')
 	df_clean['PAGE_URL_COMPLETE'] = df_clean[url_column_name].apply(lambda x : domain_name + str(x))
-	df_name = name_tag + '_' + website_name + '_' + category + '.csv'  
-	df_clean.to_csv(website_name + '/' + df_name)
+	df_name = website_name  + '_' + name_tag + '_' + category + '.csv'  
+	df_clean.to_csv('data_files/' + 'scraped_data/' + df_name)
 	print(df_clean)
 	return df_clean,df_name
 
 
-class ajio_products:
+class ajiotrends_products:
 	# https://www.ajio.com/api/category/830216014?fields=SITE&currentPage=0&pageSize=100&format=json&query=%3Anewn&sortBy=newn&gridColumns=3&facets=&advfilter=true PAGE 1 - 100 items
 	# https://www.ajio.com/api/category/830216014?fields=SITE&currentPage=1&pageSize=100&format=json&query=%3Anewn&sortBy=newn&gridColumns=3&facets=&advfilter=true PAGE 2 - 100 items
 
@@ -24,9 +25,9 @@ class ajio_products:
 		self.category = category
 
 	def scrape_new(self):
-		with open('ajio_links.json') as f:
-			ajio_links = json.load(f)
-		product_api_link_new = [ajio_links.get(self.category)]
+		with open('category_wise_links/ajiotrends_links.json') as f:
+			ajiotrends_links = json.load(f)
+		product_api_link_new = [ajiotrends_links.get(self.category)]
 		for i in self.page_list:
 			product_api_link_new.append(product_api_link_new[0].replace('currentPage=0',i))
 		new_dataframe = pd.DataFrame()
@@ -46,9 +47,9 @@ class ajio_products:
 		return new_dataframe,'new'
 			
 	def scrape_popular(self):
-		with open('ajio_links.json') as f:
-			ajio_links = json.load(f)
-		product_api_link_popular = [ajio_links.get(self.category)]
+		with open('category_wise_links/ajiotrends_links.json') as f:
+			ajiotrends_links = json.load(f)
+		product_api_link_popular = [ajiotrends_links.get(self.category)]
 		product_api_link_popular[0] = product_api_link_popular[0].replace('sortBy=newn','sortBy=relevance')
 		for i in self.page_list:
 			product_api_link_popular.append(product_api_link_popular[0].replace('currentPage=0',i))
@@ -70,17 +71,17 @@ class ajio_products:
 		return popular_dataframe,'popular'
 				
 
-with open('ajio_links.json') as f:
+with open('category_wise_links/ajiotrends_links.json') as f:
 	products = json.load(f)
 product_names = products.keys()
 
 
 for pname in product_names:
 	print(pname)
-	temp_ajio_object = ajio_products(pname)
+	temp_ajio_object = ajiotrends_products(pname)
 	
 	new_df,tag_new = temp_ajio_object.scrape_new()
 	popular_df, tag_popular = temp_ajio_object.scrape_popular()
 
-	final_new,_ = dataframe_handling(df1 = new_df, category= pname, website_name= 'AJIO', unique_column_name = 'code', domain_name = 'www.ajio.com', url_column_name = 'url', name_tag = tag_new)
-	final_popular,_ = dataframe_handling(df1 = popular_df, category= pname, website_name= 'AJIO', unique_column_name = 'code', domain_name = 'www.ajio.com', url_column_name = 'url', name_tag = tag_popular)
+	final_new,_ = dataframe_handling(df1 = new_df, category= pname, website_name= 'AJIO-TRENDS', unique_column_name = 'code', domain_name = 'trends.ajio.com', url_column_name = 'url', name_tag = tag_new)
+	final_popular,_ = dataframe_handling(df1 = popular_df, category= pname, website_name= 'AJIO-TRENDS', unique_column_name = 'code', domain_name = 'trends.ajio.com', url_column_name = 'url', name_tag = tag_popular)

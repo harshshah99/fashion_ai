@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 import requests
+import os
 
 
 def dataframe_handling(df1,category,website_name,unique_column_name,domain_name,url_column_name,name_tag):
@@ -8,8 +9,8 @@ def dataframe_handling(df1,category,website_name,unique_column_name,domain_name,
 	df_clean = df_clean.drop_duplicates(unique_column_name,keep='first')
 	df_clean['url_given'] = df_clean[url_column_name].apply(lambda x : x[0].get('href'))
 	df_clean['PAGE_URL_COMPLETE'] = df_clean['url_given'].apply(lambda x : domain_name + str(x))
-	df_name = name_tag + '_' + website_name + '_' + category + '.csv'
-	df_clean.to_csv(website_name + '/' + df_name)
+	df_name = website_name  + '_' + name_tag + '_' + category + '.csv'  
+	df_clean.to_csv('data_files/' + 'scraped_data/' + df_name)
 	print(df_clean)
 	return df_clean,df_name
 
@@ -23,7 +24,7 @@ class koovs_products:
 		self.category = category
 
 	def scrape_new(self):
-		with open('koovs_links.json') as f:
+		with open('category_wise_links/koovs_links.json') as f:
 			koovs_links = json.load(f)
 		
 		product_api_link_new = koovs_links.get(self.category)
@@ -42,7 +43,7 @@ class koovs_products:
 		return new_dataframe,'new'
 			
 	def scrape_popular(self):
-		with open('koovs_links.json') as f:
+		with open('category_wise_links/koovs_links.json') as f:
 			koovs_links = json.load(f)
 		product_api_link_popular = koovs_links.get(self.category)
 		product_api_link_popular = product_api_link_popular.replace('sort=latest','sort=relevance')
@@ -63,7 +64,7 @@ class koovs_products:
 		return popular_dataframe,'popular'
 				
 
-with open('koovs_links.json') as f:
+with open('category_wise_links/koovs_links.json') as f:
 	products = json.load(f)
 
 product_names = products.keys()

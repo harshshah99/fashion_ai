@@ -1,6 +1,7 @@
 import json
 import pandas as pd
 import requests
+import os
 
 nord_headers = {
     'Host': "www.nordstrom.com",
@@ -41,12 +42,13 @@ nord_headers = {
     'cache-control': "no-cache",
     'Postman-Token': "63cfca6e-12fa-41bc-a784-634af7b0f91c"
     }
+
 def dataframe_handling(df1,category,website_name,unique_column_name,domain_name,url_column_name,name_tag):
 	df_clean = df1.reset_index(drop=True)
 	df_clean = df_clean.drop_duplicates(unique_column_name,keep='first')
 	df_clean['PAGE_URL_COMPLETE'] = df_clean[url_column_name].apply(lambda x : domain_name + str(x))
-	df_name = name_tag + '_' + website_name + '_' + category + '.csv'
-	df_clean.to_csv(website_name + '/' + df_name)
+	df_name = website_name  + '_' + name_tag + '_' + category + '.csv'  
+	df_clean.to_csv('data_files/' + 'scraped_data/' + df_name)
 	print(df_clean)
 	return df_clean,df_name
 
@@ -60,7 +62,7 @@ class nordstrom_products:
 		self.category = category
 
 	def scrape_new(self):
-		with open('nordstrom_links.json') as f:
+		with open('category_wise_links/nordstrom_links.json') as f:
 			nordstrom_links = json.load(f)
 		
 		product_api_link_new = nordstrom_links.get(self.category)
@@ -79,7 +81,7 @@ class nordstrom_products:
 		return new_dataframe,'new'
 			
 	def scrape_popular(self):
-		with open('nordstrom_links.json') as f:
+		with open('category_wise_links/nordstrom_links.json') as f:
 			nordstrom_links = json.load(f)
 		product_api_link_popular = nordstrom_links.get(self.category)
 		product_api_link_popular = product_api_link_popular.replace('&sort=Newest','')
@@ -100,7 +102,7 @@ class nordstrom_products:
 		return popular_dataframe,'popular'
 				
 
-with open('nordstrom_links.json') as f:
+with open('category_wise_links/nordstrom_links.json') as f:
 	products = json.load(f)
 
 product_names = products.keys()

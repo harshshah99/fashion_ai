@@ -1,6 +1,7 @@
 import requests
 import json
 import pandas as pd
+import os
 
 ##LOAD MYNTRA links into a variable used for scraping
 
@@ -8,8 +9,8 @@ def dataframe_handling(df1,category,website_name,unique_column_name,domain_name,
 	df_clean = df1.reset_index(drop=True)
 	df_clean = df_clean.drop_duplicates(subset = unique_column_name,keep='first')
 	df_clean['PAGE_URL_COMPLETE'] = df_clean[url_column_name].apply(lambda x : domain_name + str(x))
-	df_name = name_tag + '_' + website_name + '_' + category + '.csv'  
-	df_clean.to_csv(website_name + '/' + df_name)
+	df_name = website_name  + '_' + name_tag + '_' + category + '.csv'  
+	df_clean.to_csv('data_files/' + 'scraped_data/' + df_name)
 	print(df_clean)
 	return df_clean,df_name
 
@@ -22,7 +23,7 @@ class asos_products:
 		self.category = category
 
 	def scrape_new(self):
-		with open('asos_links.json') as f:
+		with open('category_wise_links/asos_links.json') as f:
 			asos_links = json.load(f)
 		
 		product_api_link_new = asos_links.get(self.category).replace('limit=100','limit={}'.format(self.num_of_results))
@@ -41,7 +42,7 @@ class asos_products:
 		return new_dataframe,'new'
 			
 	def scrape_popular(self):
-		with open('asos_links.json') as f:
+		with open('category_wise_links/asos_links.json') as f:
 			asos_links = json.load(f)
 		product_api_link_popular = asos_links.get(self.category).replace('limit=100','limit={}'.format(self.num_of_results))
 		product_api_link_popular = product_api_link_popular.replace('&sort=freshness','')
@@ -63,7 +64,7 @@ class asos_products:
 
 			
 
-with open('asos_links.json') as f:
+with open('category_wise_links/asos_links.json') as f:
 	products = json.load(f)
 product_names = products.keys()
 

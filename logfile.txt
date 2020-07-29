@@ -1,0 +1,6 @@
+Wed Jul 29 18:30:40 2020:nordstrom_scrape.py: Failed
+Wed Jul 29 18:30:44 2020:asos_scrape.py: Succesful
+Wed Jul 29 18:31:04 2020:ajiotrends_scrape.py: Succesful
+Wed Jul 29 18:31:13 2020:koovs_scrape.py: Succesful
+Wed Jul 29 18:31:37 2020:ajio_scrape.py: Succesful
+Wed Jul 29 18:31:50 2020:myntra_scrape.py: Succesful

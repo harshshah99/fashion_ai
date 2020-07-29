@@ -1,0 +1,14 @@
+sites:
+  - myntra
+  - ajio
+  - koovs
+  - ajio trends
+  - asos
+
+verticals:
+  - men_tshirts
+  - men_casual_shirts
+  - women_western_dress
+  - women_tops_tshirts
+  - women_jumpsuits
+  - women_ethnic_dress

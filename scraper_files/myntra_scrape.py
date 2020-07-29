@@ -1,6 +1,7 @@
 import requests
 import json
 import pandas as pd
+import os
 
 ##LOAD MYNTRA links into a variable used for scraping
 
@@ -8,8 +9,8 @@ def dataframe_handling(df1,category,website_name,unique_column_name,domain_name,
 	df_clean = df1.reset_index(drop=True)
 	df_clean = df_clean.drop_duplicates(subset = unique_column_name,keep='first')
 	df_clean['PAGE_URL_COMPLETE'] = df_clean[url_column_name].apply(lambda x : domain_name + str(x))
-	df_name = name_tag + '_' + website_name + '_' + category + '.csv'  
-	df_clean.to_csv(website_name + '/' + df_name)
+	df_name = website_name  + '_' + name_tag + '_' + category + '.csv'  
+	df_clean.to_csv('data_files/' + 'scraped_data/' + df_name)
 	print(df_clean)
 	return df_clean,df_name
 
@@ -25,7 +26,7 @@ class myntra_products:
 		self.category = category
 
 	def scrape_new(self):
-		with open('myntra_links.json') as f:
+		with open('category_wise_links/myntra_links.json') as f:
 			myntra_links = json.load(f)
 		product_api_link_new = [myntra_links.get(self.category)]
 		for i in self.page_list:
@@ -47,7 +48,7 @@ class myntra_products:
 		return new_dataframe,'new'
 			
 	def scrape_popular(self):
-		with open('myntra_links.json') as f:
+		with open('category_wise_links/myntra_links.json') as f:
 			myntra_links = json.load(f)
 		product_api_link_popular = [myntra_links.get(self.category)]
 		product_api_link_popular[0] = product_api_link_popular[0].replace('sort=new','sort=popularity')
@@ -73,7 +74,7 @@ class myntra_products:
 
 			
 
-with open('myntra_links.json') as f:
+with open('category_wise_links/myntra_links.json') as f:
 	products = json.load(f)
 product_names = products.keys()
 
