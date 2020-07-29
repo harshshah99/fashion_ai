@@ -1,9 +1,9 @@
 sites:
-  - myntra
-  - ajio
-  - koovs
-  - ajio trends
-  - asos
+  - MYNTRA
+  - AJIO
+  - KOOVS
+  - AJIO-TRENDS
+  - ASOS
 
 verticals:
   - men_tshirts
