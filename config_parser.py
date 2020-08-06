@@ -18,8 +18,12 @@ for file in os.listdir('data_files/scraped_data'):
 	if file_details[0] in site_name and file_details[2][:-4] in verticals:
 		print(file_details[0],'____________________',file)
 
-print('___________________________________________________________________________________________________')
+print('___________________________________________________________________________________________________','\n')
 
+
+
+#This LOOP shows for a particular product vertical , which all sites have that product available with them
+#For example Women Western Dress is present in just ASOS, MYNTRA and KOOVS. Check the output of this file and you will see these 3 listed with women_western_dress
 for vert in verticals:
 	comps = []
 	for file in os.listdir('data_files/scraped_data'):
@@ -27,4 +31,6 @@ for vert in verticals:
 		if file_details[2][:-4]==vert:
 			comps.append(file_details[0])
 	print(vert,'--------',list(set(comps)))
+
+print('\n')
 	

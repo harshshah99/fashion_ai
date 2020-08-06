@@ -44,7 +44,7 @@ class myntra_products:
 			print("\n\n\n----------------------------------------------------------------------------------------\n\n\n")
 
 		new_dataframe = new_dataframe.reset_index(drop=True)
-
+		#print(new_dataframe)
 		return new_dataframe,'new'
 			
 	def scrape_popular(self):
@@ -68,7 +68,7 @@ class myntra_products:
 			print("\n\n\n----------------------------------------------------------------------------------------\n\n\n")
 
 		popular_dataframe = popular_dataframe.reset_index(drop=True)
-
+		#print(popular_dataframe)
 		return popular_dataframe,'popular'
 				
 

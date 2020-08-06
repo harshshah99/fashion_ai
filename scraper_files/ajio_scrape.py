@@ -2,6 +2,8 @@ import json
 import pandas as pd
 import requests
 import os
+import shadow_useragent 
+ua = shadow_useragent.ShadowUserAgent() 
 
 def dataframe_handling(df1,category,website_name,unique_column_name,domain_name,url_column_name,name_tag):
 	df_clean = df1.reset_index(drop=True)
@@ -31,7 +33,8 @@ class ajio_products:
 			product_api_link_new.append(product_api_link_new[0].replace('currentPage=0',i))
 		new_dataframe = pd.DataFrame()
 		for page_link in product_api_link_new[1:]:
-			response = requests.get(url=page_link, headers = {'User-Agent':'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0'})
+			response = requests.get(url=page_link, headers = {'User-Agent':ua.random})
+			print('STATUS : ', response)
 			data = response.json()
 			product_list = data.get('products')
 			new_dataframe	= new_dataframe.append(pd.DataFrame.from_records(product_list)) 
@@ -55,7 +58,7 @@ class ajio_products:
 		popular_dataframe = pd.DataFrame()
 		print(product_api_link_popular)
 		for page_link in product_api_link_popular[1:]:
-			response = requests.get(url=page_link, headers = {'User-Agent':'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0'})
+			response = requests.get(url=page_link, headers = {'User-Agent':ua.random})
 			data = response.json()
 			product_list = data.get('products')
 			popular_dataframe	= popular_dataframe.append(pd.DataFrame.from_records(product_list)) 

@@ -18,7 +18,7 @@ def dataframe_handling(df1,category,website_name,unique_column_name,domain_name,
 class asos_products:
 	## ASOS LINK FORMAT FOR REFERENCE 
 	## https://www.asos.com/api/product/search/v2/categories/7616?channel=mobile-web&country=US&currency=USD&keyStoreDataversion=j42uv2x-26&lang=en-US&limit=100&offset=0&rowlength=2&sort=freshness&store=US
-	num_of_results = 200 #if total number of products is less than this , there will be an error
+	num_of_results = 100 #if total number of products is less than this , there will be an error
 	def __init__(self,category):
 		self.category = category
 
