@@ -76,3 +76,9 @@ Thu Aug  6 21:05:40 2020:ajiotrends_scrape.py: Failed
 Thu Aug  6 21:05:40 2020:koovs_scrape.py: Failed
 Thu Aug  6 21:05:40 2020:ajio_scrape.py: Failed
 Thu Aug  6 21:05:41 2020:myntra_scrape.py: Failed
+Thu Aug  6 23:24:01 2020:koovs_scrape.py: Succesful
+Thu Aug  6 23:27:21 2020:ajio_scrape.py: Succesful
+Thu Aug  6 23:27:38 2020:myntra_scrape.py: Failed
+Thu Aug  6 23:27:41 2020:nordstrom_scrape.py: Failed
+Thu Aug  6 23:29:01 2020:ajiotrends_scrape.py: Succesful
+Thu Aug  6 23:29:25 2020:asos_scrape.py: Succesful
