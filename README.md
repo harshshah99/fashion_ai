@@ -11,4 +11,8 @@ Code and Files for Fashion Intelligence Systems
 
 There is an issue with Nordtsrom. A cookie header which expires after approximately 12hrs needs to supplied for code to work.
 
-[CODE FOR SCRAPER FILES](scraper_files/)
+REPO STRUCTURE:
+
+scraper_files - 
+All files in [scraper_files](scraper_files/) contain code for scraping their respective Websites.
+For eg. [myntra_scrape.py](scraper_files/myntra_scrape.py) is used to scrape data from Myntra. 
