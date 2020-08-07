@@ -44,7 +44,7 @@ verticals = config_data.get('verticals')
 
 
 #colrs.pkl is dataset of popular set of colors which we plan to extract from names of certain products and is used in that
-with open ('colors.pkl', 'rb') as fp:
+with open ('color_files/colors.pkl', 'rb') as fp:
 	colors_list = pickle.load(fp)
 
 colors_list = [color.lower() for color in colors_list] 

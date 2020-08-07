@@ -15,24 +15,41 @@ def dataframe_handling(df1,category,website_name,unique_column_name,domain_name,
 	return df_clean,df_name
 
 
-class myntra_products:
-	## MYNTRA LINK FORMAT FOR REFERENCE 
-	## https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=0 - MEANS first 100 products
-	## https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=99 - MEANS next 100 products
+## MYNTRA LINK FORMAT FOR REFERENCE 
+## https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=0 - MEANS first 100 products
+## https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=99 - MEANS next 100 products
 
+
+class myntra_products:
+	"""
+	Initializes by taking in a category eg. men_tshirts
+	num_of_results contains how many number of products you want to scrape (default 100)
+	page_list - This contains logic for creating a link in case more than 100 products are to be scraped
+	ie. 	https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=0 - MEANS first 100 products
+			https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=99 - MEANS 100-200 products
+			https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=199 - MEANS 200-300 products
+	to generate links as given above, page_list creates a list of substrings to be added after base_link 
+	scrape_new() - scrapes NEW products for given category , in this case men_tshirts 
+	scrape_popular() - scrapes POPULAR products for given category, in this case men_tshirts
+	"""
 	num_of_results = 100
-	page_list = [('&o=' + str(max(0,100*j - 1))) for j in range(0,int(num_of_results/100))]
-	def __init__(self,category):
+	page_list = [('&o=' + str(max(0,100*j - 1))) for j in range(0,int(num_of_results/100))] #changes link parameters and  generates URL according to num_of_results
+	#notice how first 100 products(https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=0) and next 100 products(https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=99) differ only in "&o=0" and "&o=99"
+	def __init__(self,category):  #class initializes using a given category
 		self.category = category
 
 	def scrape_new(self):
-		with open('category_wise_links/myntra_links.json') as f:
+		"""
+		Scrapes latest num_of_results products of given category, in this case 100 of the latest men_tshirts as listend on Myntra
+		returns a dataframe containing scraped data	of that given category, in this case a dataframe containing 100 latest men_tshirts from Myntra
+		"""
+		with open('category_wise_links/myntra_links.json') as f: #myntra_links.json contains key-value pairs of format 'category' : 'category_link' .ie {'men_tshirts': 'https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=0', 'men_casual_shirts':.............}
 			myntra_links = json.load(f)
-		product_api_link_new = [myntra_links.get(self.category)]
+		product_api_link_new = [myntra_links.get(self.category)] 
 		for i in self.page_list:
-			product_api_link_new.append(product_api_link_new[0].replace('&o=0',i))
-		new_dataframe = pd.DataFrame()
-		for page_link in product_api_link_new[1:]:
+			product_api_link_new.append(product_api_link_new[0].replace('&o=0',i)) #for every string in page_list, this loop modifies the base link (https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=0) to include results from other pages https://www.myntra.com/web/v2/search/men-tshirts?p=1&sort=new&rows=100&o=99
+		new_dataframe = pd.DataFrame() #initializes empty dataframe
+		for page_link in product_api_link_new[1:]: #goes through all generated links for given number of results
 			response = requests.get(url=page_link, headers = {'User-Agent':'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:74.0) Gecko/20100101 Firefox/74.0'})
 			data = response.json()
 			product_list = data.get('products')
