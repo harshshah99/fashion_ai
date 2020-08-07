@@ -1,3 +1,8 @@
+"""
+This script runs all scrapers in the folder "scraper_files" and writes the result succesful or failed in logfile.txt
+The data scraped from all websites will get stored in data_files/scraped_data in form of CSV.
+"""
+
 import os
 import time
 
