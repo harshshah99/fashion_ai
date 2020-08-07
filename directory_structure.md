@@ -1,3 +1,4 @@
+'''bash
 .
 ├── category_wise_links
 │   ├── ajio_links.json
@@ -119,3 +120,4 @@
     └── nordstrom_scrape.py
 
 5 directories, 113 files
+'''
