@@ -56,7 +56,7 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 1. Install python dependencies through pip & [requirements.txt](requirements.txt) or conda & [environment.yml](environment.yml)
 2. SCRAPING:
 	1. From the main folder, execute : 
-	```python
+	```bash
 	python run_all_scrapers.py
 	```
 	2. Check data_files/scraped_data to see if there are   CSV files in it.
@@ -79,3 +79,21 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 	```bash
 	python data_ranker.py
 	```
+	3. Data Ranker will use [trend_reference](trend_reference) to compare the scraped products.
+	4. [Trending](trend_reference/Trending) contains images of Trending products in given verticals
+	5. [Upcoming](trend_reference/Upcoming) contains images of forecasted trends for given product verticals
+	6. ALL products are ranked and stored in [here](http_server/data) - in 2 categories : Trending and Upcoming
+	7. Trending contains products ranked according to Spring-Summer 2020 ie. Observed Recent Trends
+	8. [Upcoming](trend_reference/Upcoming) contains ranked products according to to Fall-Winter 2020 ie. Forecasted Trends
+5. Python HTTP Server:
+	1. The [http_server](http_server) folder contains data for the website like homepage images and RANKED DATA
+	2. Change current working directory to http_server
+	```bash
+	cd http_server/
+	```
+	3. From http_server/ folder run: 
+	```bash
+	python server.py
+	```
+	4. Above commands hosts the JSON files in [Trending](http_server/data/Trending/Women) and in [Upcoming](http_server/data/Upcoming/Men)
+	5. These JSON files are hosted at PORT 9004 which communicates with react APP to display the products
