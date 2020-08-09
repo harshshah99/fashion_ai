@@ -59,4 +59,4 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 	```bash
 	python scraper_files/<scrapername.py>
 	```
-	2. Check data_files/scraped_data to see
+	2. Check data_files/scraped_data to see haha
