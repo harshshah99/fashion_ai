@@ -56,7 +56,7 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 1. Install python dependencies through pip & [requirements.txt](requirements.txt) or conda & [environment.yml](environment.yml)
 2. SCRAPING:
 	1. From the main folder, execute : 
-	```bash
+	```python
 	python run_all_scrapers.py
 	```
 	2. Check data_files/scraped_data to see if there are   CSV files in it.
