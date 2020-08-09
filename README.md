@@ -53,7 +53,16 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 
 ### Execution Order ###
 
-1. Install python dependencies through pip & [requirements.txt](requirements.txt) or conda & [environment.yml](environment.yml)
+1. INSTALL python dependencies through pip & [requirements.txt](requirements.txt) or conda & [environment.yml](environment.yml)
+	1. For python create a virtual environment and execute this inside the virtual environment:
+	```bash
+	pip install -r requirements.txt
+	```
+	2. For anaconda/conda execute this from the main folder:
+	```bash
+	conda env create --file environment.yml
+	```
+
 2. SCRAPING:
 	1. From the main folder, execute : 
 	```bash
@@ -64,6 +73,7 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 	```bash
 	python scraper_files/myntra_scrape.py
 	```
+
 3. DATA CLEANING: 
 	1. ALL CSVs in [scraped_data](data_files/scraped_data/) have different column name since they are scraped from different sites.
 	2. Before ranking them we need to make sure they all  have same columns so that no paricular site has some kind of bias
@@ -73,6 +83,7 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 	```
 	4. This will create product vertical CSVs in [data_files/final_data/](data_files/final_data/)
 	5. [men_tshirts.csv](men_tshirts.csv) will contain information regarding Tshirts scraped from all sites in [Config](config.yml)
+
 4. RANKING:
 	1. Download the [pretrained_vgg](https://drive.google.com/file/d/1i7AIdai4f-EAslC2wiRmPzt1vmWxFqS1/view?usp=sharing) model and place it [models](models/)
 	2. From the main folder, execute :  
@@ -85,6 +96,7 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 	6. ALL products are ranked and stored in [here](http_server/data) - in 2 categories : Trending and Upcoming
 	7. [Trending](trend_reference/Trending) contains products ranked according to Spring-Summer 2020 ie. Observed Recent Trends
 	8. [Upcoming](trend_reference/Upcoming) contains ranked products according to to Fall-Winter 2020 ie. Forecasted Trends
+
 5. Python HTTP Server:
 	1. The [http_server](http_server) folder contains data for the website like homepage images and RANKED DATA
 	2. Change current working directory to http_server
@@ -96,4 +108,4 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 	python server.py
 	```
 	4. Above commands hosts the JSON files in [Trending](http_server/data/Trending/Women) and in [Upcoming](http_server/data/Upcoming/Men)
-	5. These JSON files are hosted at PORT 9004 which communicates with react APP to display the products
+	5. These JSON files are hosted at PORT 9004 which communicates with React App to display the products
