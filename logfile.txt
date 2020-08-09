@@ -82,3 +82,30 @@ Thu Aug  6 23:27:38 2020:myntra_scrape.py: Failed
 Thu Aug  6 23:27:41 2020:nordstrom_scrape.py: Failed
 Thu Aug  6 23:29:01 2020:ajiotrends_scrape.py: Succesful
 Thu Aug  6 23:29:25 2020:asos_scrape.py: Succesful
+Sun Aug  9 17:14:41 2020:nordstrom_scrape.py: Failed
+Sun Aug  9 17:14:59 2020:asos_scrape.py: Succesful
+Sun Aug  9 17:16:59 2020:ajiotrends_scrape.py: Failed
+Sun Aug  9 17:17:06 2020:koovs_scrape.py: Succesful
+Sun Aug  9 17:17:41 2020:ajio_scrape.py: Failed
+Sun Aug  9 17:17:53 2020:myntra_scrape.py: Succesful
+Sun Aug  9 17:17:56 2020:DATA CLEANING: Succesful
+Sun Aug  9 17:20:19 2020:nordstrom_scrape.py: Failed
+Sun Aug  9 17:20:19 2020:asos_scrape.py: Failed
+Sun Aug  9 17:20:20 2020:ajiotrends_scrape.py: Failed
+Sun Aug  9 17:20:20 2020:koovs_scrape.py: Failed
+Sun Aug  9 17:20:20 2020:ajio_scrape.py: Failed
+Sun Aug  9 17:20:20 2020:myntra_scrape.py: Failed
+Sun Aug  9 17:20:24 2020:nordstrom_scrape.py: Failed
+Sun Aug  9 17:20:25 2020:asos_scrape.py: Failed
+Sun Aug  9 17:20:25 2020:ajiotrends_scrape.py: Failed
+Sun Aug  9 17:20:26 2020:koovs_scrape.py: Failed
+Sun Aug  9 17:20:27 2020:ajio_scrape.py: Failed
+Sun Aug  9 17:20:31 2020:myntra_scrape.py: Failed
+Sun Aug  9 17:20:34 2020:DATA CLEANING: Succesful
+Sun Aug  9 17:23:21 2020:nordstrom_scrape.py: Failed
+Sun Aug  9 17:23:21 2020:asos_scrape.py: Failed
+Sun Aug  9 17:23:22 2020:ajiotrends_scrape.py: Failed
+Sun Aug  9 17:23:22 2020:koovs_scrape.py: Failed
+Sun Aug  9 17:23:23 2020:ajio_scrape.py: Failed
+Sun Aug  9 17:23:24 2020:myntra_scrape.py: Failed
+Sun Aug  9 17:23:26 2020:DATA CLEANING: Succesful

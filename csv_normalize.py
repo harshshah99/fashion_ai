@@ -115,6 +115,7 @@ def asos_cleaner(csv_path):
 	asos_data_clean['Site'] = site
 	#asos_data_clean['imageUrl'] = asos_data_clean['imageUrl'].apply(lambda x  : [x])
 	asos_data_clean.rename(columns = {"isSellingFast":"Trending"},inplace=True)
+	asos_data_clean['imageUrl'] = asos_data_clean['imageUrl'].apply(lambda x : 'http://' + x) 
 	asos_data_clean = asos_data_clean[['PAGE_URL_COMPLETE','name','color','imageUrl','Trending','Site']]
 	asos_data_clean['Category'] = category
 	return asos_data_clean

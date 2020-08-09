@@ -1,0 +1,26 @@
+[
+	{
+		"key":"product1",
+		"name":"Shirt1-2",
+		"imageLink":"http://images.asos-media.com/products/asos-design-oversized-linen-shirt-in-ecru/14480503-1-ecru",
+		"productLink":"www.asos.com/usasos-design/asos-design-oversized-linen-shirt-in-ecru/prd/14480503?colourwayid=16619385"
+	},
+	{
+		"key":"product2",
+		"name":"Shirt2-2",
+		"imageLink":"http://assets.myntassets.com/assets/images/productimage/2019/6/13/d6c90549-ae9c-4c98-b88f-c9fff27d01e51560380608904-1.jpg",
+		"productLink":"gmail.com"
+	},
+	{
+		"key":"product3",
+		"name":"Shirt3-2",
+		"imageLink":"http://assets.myntassets.com/assets/images/productimage/2019/6/13/d6c90549-ae9c-4c98-b88f-c9fff27d01e51560380608904-1.jpg",
+		"productLink":"gmail.com"
+	},
+	{
+		"key":"product4",
+		"name":"Shgaegt4-2",
+		"imageLink":"http://assets.myntassets.com/assets/images/productimage/2019/6/13/d6c90549-ae9c-4c98-b88f-c9fff27d01e51560380608904-1.jpg",
+		"productLink":"gmail.com"
+	}
+]
