@@ -31,7 +31,7 @@ the [config.yml](config.yml) file contains the two important aspects of this app
 
 From all the files present in [this folder](data_files/scraped_data/), config.yml is resonsible for deciding which verticals and which websites will be used in creating the final data which will be ranked and served to the user.
 
-config_parser
+Running [config_parser.py](config_parser.py) one can see the current config settings, the websites being scraped, the verticals which are included and also available ones which haven't been included. 
 
 ## Pretrained DeepFashion Model ##
 
