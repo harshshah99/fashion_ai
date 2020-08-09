@@ -107,5 +107,5 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 	```bash
 	python server.py
 	```
-	4. Above commands hosts the JSON files in [Trending](http_server/data/Trending/Women) and in [Upcoming](http_server/data/Upcoming/Men)
+	4. Above commands hosts the JSON files in [Trending](http_server/data/Trending/Women) and in [Upcoming](http_server/data/Upcoming/Men) to a Local HTTP Server
 	5. These JSON files are hosted at PORT 9004 which communicates with React App to display the products

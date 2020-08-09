@@ -109,3 +109,9 @@ Sun Aug  9 17:23:22 2020:koovs_scrape.py: Failed
 Sun Aug  9 17:23:23 2020:ajio_scrape.py: Failed
 Sun Aug  9 17:23:24 2020:myntra_scrape.py: Failed
 Sun Aug  9 17:23:26 2020:DATA CLEANING: Succesful
+Sun Aug  9 22:04:34 2020:nordstrom_scrape.py: Failed
+Sun Aug  9 22:04:36 2020:asos_scrape.py: Failed
+Sun Aug  9 22:04:36 2020:ajiotrends_scrape.py: Failed
+Sun Aug  9 22:04:38 2020:koovs_scrape.py: Failed
+Sun Aug  9 22:04:39 2020:ajio_scrape.py: Failed
+Sun Aug  9 22:04:51 2020:myntra_scrape.py: Succesful
