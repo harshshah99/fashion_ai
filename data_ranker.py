@@ -18,7 +18,8 @@ name_key = {
 	'women_western_dress' : 'Western Dress',
 	'women_tops_tshirts' : 'Tops and Tshirts',
 	'women_jumpsuits' : 'Jumpsuits',
-	'women_ethnic_dress' : 'Ethnic Dress'
+	'women_ethnic_dress' : 'Ethnic Dress',
+	'men_shorts' : 'Shorts'
 }
 
 

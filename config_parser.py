@@ -20,8 +20,17 @@ for file in os.listdir('data_files/scraped_data'):
 
 print('___________________________________________________________________________________________________','\n')
 
+	
+print('LIST OF ALL Verticals available for ranking  are :\n\n')
+available_verts = []
+for file in os.listdir('data_files/scraped_data'):
+	available_verts.append(file.split(sep='_',maxsplit=2)[2][:-4])
+available_verts = list(set(available_verts))
+for i in available_verts:
+	print(i)
 
-
+print('___________________________________________________________________________________________________\n')
+print('LIST of Verticals in Config and Sites which contain those vericals : \n')
 #This LOOP shows for a particular product vertical , which all sites have that product available with them
 #For example Women Western Dress is present in just ASOS, MYNTRA and KOOVS. Check the output of this file and you will see these 3 listed with women_western_dress
 for vert in verticals:
@@ -33,4 +42,3 @@ for vert in verticals:
 	print(vert,'--------',list(set(comps)))
 
 print('\n')
-	
