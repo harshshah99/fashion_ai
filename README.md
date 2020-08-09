@@ -19,7 +19,7 @@ For eg. [myntra_scrape.py](scraper_files/myntra_scrape.py) is used to scrape dat
 
 ## Site links json Files ##
 
-Each json_file in [category_wise_links](categrory_wise_links) contains keys for product verticals and the specfic key has a value which is the API url we use to scrape the website.
+Each json_file in [category_wise_links](category_wise_links) contains keys for product verticals and the specfic key has a value which is the API url we use to scrape the website.
 For. eg  in [myntra_links.json](categrory_wise_links/myntra_links.json) the key "men_tshirts" has a value  https://www.myntra.com/web/v2/search/men-tshirts?p=2&sort=new&rows=100&o=0 which is used to scrape Tshirts for Men from Myntra.
 
 
