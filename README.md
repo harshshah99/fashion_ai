@@ -83,7 +83,7 @@ sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
 	4. [Trending](trend_reference/Trending) contains images of Trending products in given verticals
 	5. [Upcoming](trend_reference/Upcoming) contains images of forecasted trends for given product verticals
 	6. ALL products are ranked and stored in [here](http_server/data) - in 2 categories : Trending and Upcoming
-	7. Trending contains products ranked according to Spring-Summer 2020 ie. Observed Recent Trends
+	7. [Trending](trend_reference/Trending) contains products ranked according to Spring-Summer 2020 ie. Observed Recent Trends
 	8. [Upcoming](trend_reference/Upcoming) contains ranked products according to to Fall-Winter 2020 ie. Forecasted Trends
 5. Python HTTP Server:
 	1. The [http_server](http_server) folder contains data for the website like homepage images and RANKED DATA
