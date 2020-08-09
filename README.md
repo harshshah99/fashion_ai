@@ -22,6 +22,16 @@ For eg. [myntra_scrape.py](scraper_files/myntra_scrape.py) is used to scrape dat
 Each json_file in [category_wise_links](category_wise_links) contains keys for product verticals and the specfic key has a value which is the API url we use to scrape the website.
 For. eg  in [myntra_links.json](categrory_wise_links/myntra_links.json) the key "men_tshirts" has a value  https://www.myntra.com/web/v2/search/men-tshirts?p=2&sort=new&rows=100&o=0 which is used to scrape Tshirts for Men from Myntra.
 
+## Config ##
+
+the [config.yml](config.yml) file contains the two important aspects of this app:
+
+1. Websites
+2. Product Verticals
+
+From all the files present in [this folder](data_files/scraped_data/), config.yml is resonsible for deciding which verticals and which websites will be used in creating the final data which will be ranked and served to the user.
+
+config_parser
 
 ## Pretrained DeepFashion Model ##
 
