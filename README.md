@@ -23,11 +23,6 @@ Each json_file in [category_wise_links](category_wise_links) contains keys for p
 For. eg  in [myntra_links.json](categrory_wise_links/myntra_links.json) the key "men_tshirts" has a value  https://www.myntra.com/web/v2/search/men-tshirts?p=2&sort=new&rows=100&o=0 which is used to scrape Tshirts for Men from Myntra.
 
 
-After running [data_ranker.py](data_ranker.py) run the following command in terminal:
-```bash
-sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
-```
-
 ## Pretrained DeepFashion Model ##
 
 We have used the vgg16 trained on Attribute prediction to generate embeddings. The link for that model is:
@@ -35,3 +30,10 @@ We have used the vgg16 trained on Attribute prediction to generate embeddings. T
 [vgg16_pretrained.pth](https://drive.google.com/file/d/1i7AIdai4f-EAslC2wiRmPzt1vmWxFqS1/view?usp=sharing)
 
 The original link of the model is from here : [ MMFASHION - Category and Attribute Prediction(Fine) Global Pooling VGG 16 Model](https://github.com/open-mmlab/mmfashion/blob/master/docs/MODEL_ZOO.md)
+
+
+
+After running [data_ranker.py](data_ranker.py) run the following command in terminal:
+```bash
+sync && echo 3 | sudo tee /proc/sys/vm/drop_caches
+```
