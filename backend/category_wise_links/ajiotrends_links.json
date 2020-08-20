@@ -1,0 +1,9 @@
+{"men_tshirts":"https://trends.ajio.com/api/category/83?fields=SITE&currentPage=0&pageSize=100&format=json&query=%3Anewn&sortBy=newn&curated=true&curatedid=tees-3419-08331&gridColumns=3&facets=&advfilter=true&store=trends",
+"men_shorts":"https://trends.ajio.com/api/category/83?fields=SITE&currentPage=0&pageSize=100&format=json&query=%3Anewn&sortBy=newn&curated=true&curatedid=shorts-and-three-fourths-3419-08331&gridColumns=3&facets=&advfilter=true&store=trends",
+"men_casual_shirts":"https://trends.ajio.com/api/category/83?fields=SITE&currentPage=0&pageSize=100&format=json&query=%3Anewn&sortBy=newn&curated=true&curatedid=shirts-3419-08331&gridColumns=3&facets=&advfilter=true&store=trends",
+"men_pants":"https://trends.ajio.com/api/category/83?fields=SITE&currentPage=0&pageSize=100&format=json&query=%3Anewn&sortBy=newn&curated=true&curatedid=trousers-and-pants-3419-08331&gridColumns=3&facets=&advfilter=true&store=trends",
+"women_tops_tshirts":"https://trends.ajio.com/api/category/83?fields=SITE&currentPage=0&pageSize=100&format=json&query=%3Anewn&sortBy=newn&curated=true&curatedid=tees-3419-08333&gridColumns=3&facets=&advfilter=true&store=trends",
+"women_kurtas_tunics":"https://trends.ajio.com/api/category/83?fields=SITE&currentPage=0&pageSize=100&format=json&query=%3Anewn&sortBy=newn&curated=true&curatedid=kurtis-and-tunics-3419-08331&gridColumns=3&facets=&advfilter=true&store=trends",
+"women_ethnic_dress":"https://trends.ajio.com/api/category/83?fields=SITE&currentPage=0&pageSize=100&format=json&query=%3Anewn&sortBy=newn&curated=true&curatedid=kurta-suit-sets-3419-08331&gridColumns=3&facets=&advfilter=true&store=trends",
+"women_fusion_tops":"https://trends.ajio.com/api/category/83?fields=SITE&currentPage=0&pageSize=100&format=json&query=%3Anewn&sortBy=newn&curated=true&curatedid=shirts-tops-and-tunics-3419-08331&gridColumns=3&facets=&advfilter=true&store=trends"
+}

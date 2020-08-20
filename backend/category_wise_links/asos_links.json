@@ -1,0 +1,9 @@
+{"men_tshirts":"https://www.asos.com/api/product/search/v2/categories/7616?channel=mobile-web&country=US&currency=USD&keyStoreDataversion=j42uv2x-26&lang=en-US&limit=100&offset=0&rowlength=2&sort=freshness&store=US",
+"men_shorts":"https://www.asos.com/api/product/search/v2/categories/7078?channel=mobile-web&country=US&currency=USD&keyStoreDataversion=j42uv2x-26&lang=en-US&limit=100&offset=0&rowlength=2&sort=freshness&store=US",
+"men_casual_shirts":"https://www.asos.com/api/product/search/v2/categories/3602?channel=desktop-web&country=US&currency=USD&keyStoreDataversion=j42uv2x-26&lang=en-US&limit=100&offset=0&rowlength=3&sort=freshness&store=US",
+"men_pants":"https://www.asos.com/api/product/search/v2/categories/4910?channel=mobile-web&country=US&currency=USD&keyStoreDataversion=j42uv2x-26&lang=en-US&limit=100&offset=0&rowlength=2&sort=freshness&store=US",
+"women_tops_tshirts":"https://www.asos.com/api/product/search/v2/categories/4169?channel=mobile-web&country=US&currency=USD&keyStoreDataversion=j42uv2x-26&lang=en-US&limit=100&offset=0&rowlength=2&sort=freshness&store=US",
+"women_jumpsuits":"https://www.asos.com/api/product/search/v2/categories/7618?channel=mobile-web&country=US&currency=USD&keyStoreDataversion=j42uv2x-26&lang=en-US&limit=100&offset=0&rowlength=2&sort=freshness&store=US",
+"women_western_dress":"https://www.asos.com/api/product/search/v2/categories/8799?channel=mobile-web&country=US&currency=USD&keyStoreDataversion=j42uv2x-26&lang=en-US&limit=100&offset=0&rowlength=2&sort=freshness&store=US",
+"women_trousers_leggings":"https://www.asos.com/api/product/search/v2/categories/2640?channel=mobile-web&country=US&currency=USD&keyStoreDataversion=j42uv2x-26&lang=en-US&limit=100&offset=0&rowlength=2&sort=freshness&store=US"
+}
