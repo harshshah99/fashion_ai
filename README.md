@@ -1,4 +1,4 @@
-# flipgrid
+# Fashion Intelligence Systems
 
 Code and Files for Fashion Intelligence Systems
 
