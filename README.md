@@ -1,4 +1,4 @@
-# Fashion Intelligence Systems
+# Fashion Intelligence System
 
 Code and Files for Fashion Intelligence Systems
 
