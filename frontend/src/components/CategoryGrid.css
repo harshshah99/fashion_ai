@@ -1,0 +1,16 @@
+.wrapper
+{
+  display: grid;
+  background-color: #eeeeeeff;
+  width:100%;
+  padding-top:50px;
+}
+.container
+{
+	width:250%;
+	margin-left: 25%;
+	justify-content: center;
+	background-color: #ddccbb;
+	text-decoration: none;
+	border-radius: 50px;
+}

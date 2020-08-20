@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+  width:100%;
+  min-height: 100vh;
+  background-color: #333333;
+  text-decoration: none;
+}
+
+.App-header {
+  position: fixed;
+  height: 50px;
+  top: 0;
+  width: 100%;
+  background-color: #26088a;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding:0px;
+  text-decoration: none;
+}
+
+.wrapper
+{
+  margin-top: 40px;
+}
+
+.textDecorator
+{
+  text-decoration-style: none;
+  color: #ffffff;
+}

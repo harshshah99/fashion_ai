@@ -1,0 +1,28 @@
+.wrapper
+{
+  background-color: #eeeeee;
+  width:stretch;
+  scroll-behavior: auto;
+  padding-top:50px;
+  display: grid;
+  grid-template-columns: repeat(3, 30%);	 
+  grid-auto-rows: auto;	 
+  grid-gap: auto;
+}
+.header
+{
+	display: flex;
+	margin-top:30px;
+}
+.type-header-trending1
+{
+	flex:1;
+	text-decoration: none;
+	color: #ff0000;
+}
+.type-header-trending2
+{
+	flex:1;
+	text-decoration: none;
+	color: #ffffff;
+}

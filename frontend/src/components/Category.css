@@ -1,0 +1,31 @@
+.card-container
+{
+  box-shadow: 0 4px 8px 0 rgba(255,0,100,0.2);
+  width: 90%;
+  margin-top: 50px;
+  margin-left: 5%;
+  border: 5px solid #e7e7e7;
+  border-radius: 30px;
+  transition: 0.3s;
+  padding: 10px;
+  background-color: #999999;
+}
+.card-image
+{
+  width:100%;
+  border-radius: 20px;
+}
+
+.card-container:hover
+{
+  box-shadow: 0 4px 8px 0 rgba(10,10,10,0.2);
+  padding:8px;
+  background-color: #888888;
+  width:80%;
+  margin-left: 10%;
+}
+
+.textDecorator
+{
+  text-decoration: none;
+}
